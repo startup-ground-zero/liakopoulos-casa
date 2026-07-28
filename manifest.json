@@ -1,0 +1,23 @@
+{
+    "name": "Liakopoulos Casa",
+    "short_name": "Liakopoulos",
+    "description": "Υλικά σπιτιού, χρώματα, εργαλεία, πλακάκια, διακόσμηση. Οικογενειακή επιχείρηση από το 1985.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#FAFAF8",
+    "theme_color": "#B8860B",
+    "orientation": "portrait-primary",
+    "lang": "el",
+    "icons": [
+        {
+            "src": "LIAKOPOULOS_casa_LOGO_for_web.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "LIAKOPOULOS_casa_LOGO_for_web.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
