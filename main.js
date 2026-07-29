@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(contactForm);
 
             try {
-                const response = await fetch('https://formspree.io/f/info@liakopoulos-casa.gr', {
+                const response = await fetch('https://formspree.io/f/xwvgzeln', {
                     method: 'POST',
                     body: formData,
                     headers: { 'Accept': 'application/json' }
