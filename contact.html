@@ -52,18 +52,31 @@
 
             <div class="nav-links" id="navLinks">
                 <a href="index.html" class="nav-link" data-text="Αρχική">Αρχική</a>
-                <a href="categories.html" class="nav-link" data-text="Κατηγορίες">Κατηγορίες</a>
                 <a href="inspiration.html" class="nav-link" data-text="Έμπνευση">Έμπνευση</a>
                 <a href="story.html" class="nav-link" data-text="Η Ιστορία μας">Η Ιστορία μας</a>
                 <a href="contact.html" class="nav-link active" data-text="Επικοινωνία">Επικοινωνία</a>
             </div>
 
             <div class="nav-right">
+                <div class="nav-search" id="navSearch">
+                    <button class="nav-search-btn" id="searchToggle" aria-label="Αναζήτηση">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    </button>
+                    <div class="nav-search-box" id="searchBox">
+                        <input type="text" id="searchInput" placeholder="Αναζήτηση κατηγορίας..." autocomplete="off">
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </div>
                 <a href="https://www.instagram.com/liakopoulos_casa/" target="_blank" rel="noopener" class="nav-social">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                         <rect x="2" y="2" width="20" height="20" rx="5"/>
                         <circle cx="12" cy="12" r="5"/>
                         <circle cx="17.5" cy="6.5" r="1.5"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/liakopouloscasa" target="_blank" rel="noopener" class="nav-social">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                     </svg>
                 </a>
                 <button class="nav-menu-btn" id="menuBtn" aria-label="Menu">
@@ -79,7 +92,6 @@
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-inner">
             <a href="index.html" class="mobile-link">Αρχική</a>
-            <a href="categories.html" class="mobile-link">Κατηγορίες</a>
             <a href="inspiration.html" class="mobile-link">Έμπνευση</a>
             <a href="story.html" class="mobile-link">Η Ιστορία μας</a>
             <a href="contact.html" class="mobile-link active">Επικοινωνία</a>
@@ -194,7 +206,7 @@
                     <h3 style="font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 0.5rem;">Στείλτε μας μήνυμα</h3>
                     <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 2rem;">Θα σας απαντήσουμε εντός 24 ωρών</p>
                     
-                    <form class="contact-form" style="display: flex; flex-direction: column; gap: 1.2rem;" action="#" method="POST">
+                    <form class="contact-form" id="contactForm" style="display: flex; flex-direction: column; gap: 1.2rem;" action="https://formspree.io/f/info@liakopoulos-casa.gr" method="POST">
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                             <div>
                                 <label style="display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-light); margin-bottom: 0.4rem;">Όνομα *</label>
@@ -216,8 +228,8 @@
                             <textarea name="message" rows="4" required style="width: 100%; padding: 0.9rem 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: var(--font-body); font-size: 0.9rem; background: var(--color-bg); resize: vertical; transition: border-color 0.3s, box-shadow 0.3s; outline: none;" onfocus="this.style.borderColor='var(--color-accent)';this.style.boxShadow='0 0 0 3px rgba(184,134,11,0.1)'" onblur="this.style.borderColor='var(--color-border)';this.style.boxShadow='none'"></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary" style="align-self: flex-start; margin-top: 0.5rem;">
-                            <span>Αποστολή</span>
+                        <button type="submit" id="submitBtn" class="btn btn-primary" style="align-self: flex-start; margin-top: 0.5rem;">
+                            <span id="submitText">Αποστολή</span>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
                             </svg>
@@ -233,25 +245,14 @@
         <div class="footer-top">
             <div class="footer-brand">
                 <img src="LIAKOPOULOS_casa_LOGO_for_web.png" alt="Liakopoulos Casa" class="footer-logo-img">
-                <p class="footer-tagline">Το σπίτι της ποιότητας, από το 1985</p>
             </div>
             <div class="footer-links">
                 <div class="footer-col">
                     <h5>Πλοήγηση</h5>
                     <a href="index.html">Αρχική</a>
-                    <a href="categories.html">Κατηγορίες</a>
                     <a href="inspiration.html">Έμπνευση</a>
                     <a href="story.html">Η Ιστορία μας</a>
                     <a href="contact.html">Επικοινωνία</a>
-                </div>
-                <div class="footer-col">
-                    <h5>Κατηγορίες</h5>
-                    <a href="categories.html#paint">Χρώματα</a>
-                    <a href="categories.html#tools">Εργαλεία</a>
-                    <a href="categories.html#building">Υλικά Οικοδομής</a>
-                    <a href="categories.html#locks">Κλειδαριές</a>
-                    <a href="categories.html#faucets">Μπαταρίες</a>
-                    <a href="categories.html#curtains">Κουρτινόβεργες</a>
                 </div>
                 <div class="footer-col">
                     <h5>Επικοινωνία</h5>
@@ -273,6 +274,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- Category Popup -->
+    <div class="category-popup-overlay" id="categoryPopup">
+        <div class="category-popup">
+            <button class="category-popup-close" id="popupClose">&times;</button>
+            <h3 class="category-popup-title" id="popupTitle"></h3>
+            <ul class="category-popup-list" id="popupList"></ul>
+            <a href="contact.html" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%; justify-content: center;">
+                <span>Επικοινωνήστε μαζί μας</span>
+            </a>
+        </div>
+    </div>
 
     <!-- WhatsApp Float -->
     <a href="https://wa.me/306944282790" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">

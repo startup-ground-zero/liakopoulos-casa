@@ -69,19 +69,19 @@ body {
     background-color: var(--color-bg);
     line-height: 1.6;
     overflow-x: hidden;
-    cursor: none;
+    cursor: default;
 }
 
 a {
     text-decoration: none;
     color: inherit;
-    cursor: none;
+    cursor: pointer;
 }
 
 button {
     border: none;
     background: none;
-    cursor: none;
+    cursor: pointer;
     font-family: inherit;
 }
 
@@ -251,17 +251,17 @@ ul, ol {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 4.5rem;
     position: relative;
     z-index: 10;
 }
 
 .nav-link {
     font-family: var(--font-body);
-    font-size: 0.85rem;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 500;
     color: rgba(255, 255, 255, 0.8);
-    letter-spacing: 0.02em;
+    letter-spacing: 0.04em;
     position: relative;
     padding: 0.5rem 0;
     transition: color var(--duration-fast);
@@ -303,6 +303,7 @@ ul, ol {
 .nav-social {
     color: rgba(255, 255, 255, 0.8);
     transition: color var(--duration-fast);
+    cursor: pointer;
 }
 
 .header.scrolled .nav-social {
@@ -434,7 +435,7 @@ ul, ol {
     width: 100%;
     height: 100%;
     background: 
-        linear-gradient(135deg, #1a1a2e 0%, #16213e 30%, #0f3460 60%, #1a1a2e 100%);
+        linear-gradient(135deg, #2c2c2c 0%, #3a3a3a 30%, #4a4a4a 60%, #2c2c2c 100%);
 }
 
 .hero-bg-overlay {
@@ -443,8 +444,8 @@ ul, ol {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(ellipse at 30% 50%, rgba(184, 134, 11, 0.15), transparent 60%),
-                radial-gradient(ellipse at 70% 80%, rgba(15, 52, 96, 0.3), transparent 50%);
+    background: radial-gradient(ellipse at 30% 50%, rgba(184, 134, 11, 0.12), transparent 60%),
+                radial-gradient(ellipse at 70% 80%, rgba(160, 160, 160, 0.15), transparent 50%);
 }
 
 .hero-bg-grain {
@@ -462,7 +463,7 @@ ul, ol {
     z-index: 2;
     text-align: center;
     padding: 0 var(--container-padding);
-    max-width: 900px;
+    max-width: var(--container-max);
 }
 
 .hero-tagline {
@@ -673,7 +674,7 @@ ul, ol {
 .marquee-inner {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
     animation: marqueeScroll 30s linear infinite;
     white-space: nowrap;
     width: max-content;
@@ -681,9 +682,9 @@ ul, ol {
 
 .marquee-inner span {
     font-family: var(--font-heading);
-    font-size: 0.85rem;
-    font-weight: 300;
-    letter-spacing: 0.2em;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.6);
 }
@@ -765,6 +766,7 @@ ul, ol {
     display: flex;
     gap: 1.5rem;
     padding-bottom: 1rem;
+    justify-content: center;
 }
 
 .category-card {
@@ -778,6 +780,7 @@ ul, ol {
     flex-direction: column;
     justify-content: flex-end;
     transition: transform var(--duration-fast) var(--ease-out);
+    cursor: pointer;
 }
 
 .category-card:hover {
@@ -1733,6 +1736,182 @@ textarea:focus-visible {
         gap: 2rem !important;
         padding: 3rem var(--container-padding) !important;
     }
+}
+
+/* WhatsApp Floating Button */
+/* Category Popup */
+.category-popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9000;
+    backdrop-filter: blur(4px);
+}
+
+.category-popup-overlay.active {
+    display: flex;
+}
+
+.category-popup {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    max-width: 640px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+    animation: popupIn 0.3s var(--ease-out);
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+@keyframes popupIn {
+    from { opacity: 0; transform: scale(0.95) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.category-popup-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    line-height: 1;
+    transition: color var(--duration-fast);
+}
+
+.category-popup-close:hover {
+    color: var(--color-text);
+}
+
+.category-popup-title {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.category-popup-list {
+    list-style: none;
+    padding: 0;
+    columns: 2;
+    column-gap: 2rem;
+}
+
+.category-popup-list li {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    border-bottom: 1px solid var(--color-border);
+    padding-left: 1.2rem;
+    position: relative;
+    break-inside: avoid;
+}
+
+.category-popup-list li:last-child {
+    border-bottom: none;
+}
+
+.category-popup-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+/* Nav Search */
+.nav-search {
+    position: relative;
+}
+
+.nav-search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.8);
+    transition: color var(--duration-fast);
+    cursor: pointer;
+}
+
+.header.scrolled .nav-search-btn {
+    color: var(--color-text-light);
+}
+
+.nav-search-btn:hover {
+    color: var(--color-accent);
+}
+
+.nav-search-box {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 1rem;
+    width: 280px;
+    display: none;
+    flex-direction: column;
+    background: white;
+    border-radius: var(--radius-md);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 100;
+}
+
+.nav-search-box.active {
+    display: flex;
+}
+
+.nav-search-box input {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: none;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-text);
+    outline: none;
+    background: white;
+    cursor: text;
+}
+
+.nav-search-box input::placeholder {
+    color: var(--color-text-muted);
+}
+
+.search-results {
+    max-height: 240px;
+    overflow-y: auto;
+    border-top: 1px solid var(--color-border);
+}
+
+.search-results:empty {
+    border-top: none;
+}
+
+.search-result-item {
+    display: block;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    color: var(--color-text);
+    transition: background var(--duration-fast);
+    cursor: pointer;
+}
+
+.search-result-item:hover {
+    background: var(--color-bg-warm);
+    color: var(--color-accent);
+}
+
+.search-no-results {
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
 }
 
 /* WhatsApp Floating Button */

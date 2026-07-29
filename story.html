@@ -55,18 +55,31 @@
 
             <div class="nav-links" id="navLinks">
                 <a href="index.html" class="nav-link" data-text="Αρχική">Αρχική</a>
-                <a href="categories.html" class="nav-link" data-text="Κατηγορίες">Κατηγορίες</a>
                 <a href="inspiration.html" class="nav-link" data-text="Έμπνευση">Έμπνευση</a>
                 <a href="story.html" class="nav-link active" data-text="Η Ιστορία μας">Η Ιστορία μας</a>
                 <a href="contact.html" class="nav-link" data-text="Επικοινωνία">Επικοινωνία</a>
             </div>
 
             <div class="nav-right">
+                <div class="nav-search" id="navSearch">
+                    <button class="nav-search-btn" id="searchToggle" aria-label="Αναζήτηση">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    </button>
+                    <div class="nav-search-box" id="searchBox">
+                        <input type="text" id="searchInput" placeholder="Αναζήτηση κατηγορίας..." autocomplete="off">
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </div>
                 <a href="https://www.instagram.com/liakopoulos_casa/" target="_blank" rel="noopener" class="nav-social">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                         <rect x="2" y="2" width="20" height="20" rx="5"/>
                         <circle cx="12" cy="12" r="5"/>
                         <circle cx="17.5" cy="6.5" r="1.5"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/liakopouloscasa" target="_blank" rel="noopener" class="nav-social">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                     </svg>
                 </a>
                 <button class="nav-menu-btn" id="menuBtn" aria-label="Menu">
@@ -82,7 +95,6 @@
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-inner">
             <a href="index.html" class="mobile-link">Αρχική</a>
-            <a href="categories.html" class="mobile-link">Κατηγορίες</a>
             <a href="inspiration.html" class="mobile-link">Έμπνευση</a>
             <a href="story.html" class="mobile-link active">Η Ιστορία μας</a>
             <a href="contact.html" class="mobile-link">Επικοινωνία</a>
@@ -98,6 +110,25 @@
             <p class="section-desc reveal-up" style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 1.5rem auto 0; --delay: 0.4s">
                 Από μια μικρή αποθήκη υλικών στο ξεκίνημα, σε ένα σημείο αναφοράς για χιλιάδες σπίτια σε όλη την Ελλάδα
             </p>
+        </section>
+
+        <!-- Owner Section -->
+        <section style="padding: var(--space-xl) var(--container-padding);">
+            <div style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 300px 1fr; gap: 4rem; align-items: center;" class="reveal-up">
+                <div style="border-radius: var(--radius-xl); overflow: hidden; aspect-ratio: 3/4; background: var(--color-bg-warm); display: flex; align-items: center; justify-content: center;">
+                    <img src="orestis_image.jpg" alt="Ορέστης Λιακόπουλος" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div>
+                    <span class="section-label">Ιδιοκτήτης</span>
+                    <h2 style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 300; margin: 1rem 0 1.5rem;">Ορέστης Λιακόπουλος</h2>
+                    <p style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.8; margin-bottom: 1.5rem;">
+                        Το Liakopoulos Casa ιδρύθηκε το 1975 στο Ρίο Πατρών από τον πατέρα του Ορέστη, με όραμα να δημιουργήσει ένα κατάστημα που θα προσφέρει ολοκληρωμένες λύσεις για κάθε σπίτι. Σήμερα, ο Ορέστης συνεχίζει την οικογενειακή παράδοση με πάθος για την ποιότητα και αφοσίωση στην εξυπηρέτηση.
+                    </p>
+                    <p style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.8;">
+                        Με 50 χρόνια εμπειρίας, γνώση της αγοράς και προσωπική σχέση με κάθε πελάτη, ο Ορέστης και η οικογένειά του συνεχίζουν να εξελίσσουν το κατάστημα, προσφέροντας πάντα τα καλύτερα προϊόντα στις πιο ανταγωνιστικές τιμές.
+                    </p>
+                </div>
+            </div>
         </section>
 
         <!-- Values Section -->
@@ -119,7 +150,7 @@
                         </svg>
                     </div>
                     <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 0.75rem;">Εμπιστοσύνη</h3>
-                    <p style="font-size: 0.9rem; color: var(--color-text-light); line-height: 1.7;">40 χρόνια εμπιστοσύνης από χιλιάδες πελάτες σε όλη την Ελλάδα.</p>
+                    <p style="font-size: 0.9rem; color: var(--color-text-light); line-height: 1.7;">50 χρόνια εμπιστοσύνης από χιλιάδες πελάτες.</p>
                 </div>
                 <div class="reveal-up" style="--delay: 0.2s">
                     <div style="width: 64px; height: 64px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--color-bg-warm);">
@@ -137,7 +168,7 @@
         <!-- Timeline -->
         <section class="story-timeline">
             <div class="timeline-item reveal-up">
-                <span class="timeline-year">1985</span>
+                <span class="timeline-year">1975</span>
                 <div class="timeline-content">
                     <h3>Η Αρχή</h3>
                     <p>Η οικογένεια Λιακόπουλος ξεκινά με ένα μικρό κατάστημα υλικών στην γειτονιά. Με σκληρή δουλειά και αφοσίωση, θέτει τα θεμέλια αυτού που θα γίνει σημείο αναφοράς για χιλιάδες σπίτια.</p>
@@ -164,7 +195,7 @@
                 <span class="timeline-year">2015</span>
                 <div class="timeline-content">
                     <h3>Πανελλαδική Αναγνώριση</h3>
-                    <p>Η Liakopoulos Casa αναγνωρίζεται πλέον ως σημείο αναφοράς στον χώρο. Πελάτες από όλη την Ελλάδα εμπιστεύονται την ποιότητα και την εξυπηρέτησή μας.</p>
+                    <p>Η Liakopoulos Casa αναγνωρίζεται πλέον ως σημείο αναφοράς στον χώρο.</p>
                 </div>
             </div>
             
@@ -172,7 +203,7 @@
                 <span class="timeline-year">2025</span>
                 <div class="timeline-content">
                     <h3>Σήμερα & Αύριο</h3>
-                    <p>Με πάνω από 50.000 προϊόντα, 200+ μάρκες, και μια ομάδα αφοσιωμένων επαγγελματιών, συνεχίζουμε να εμπνέουμε και να εξυπηρετούμε. Ο στόχος παραμένει ο ίδιος: να κάνουμε κάθε σπίτι πιο όμορφο.</p>
+                    <p>Με πάνω από 250.000 προϊόντα, 200+ επώνυμες εταιρείες, και μια ομάδα αφοσιωμένων επαγγελματιών, συνεχίζουμε να εμπνέουμε και να εξυπηρετούμε. Ο στόχος παραμένει ο ίδιος: να κάνουμε κάθε σπίτι πιο όμορφο.</p>
                 </div>
             </div>
         </section>
@@ -211,25 +242,14 @@
         <div class="footer-top">
             <div class="footer-brand">
                 <img src="LIAKOPOULOS_casa_LOGO_for_web.png" alt="Liakopoulos Casa" class="footer-logo-img">
-                <p class="footer-tagline">Το σπίτι της ποιότητας, από το 1985</p>
             </div>
             <div class="footer-links">
                 <div class="footer-col">
                     <h5>Πλοήγηση</h5>
                     <a href="index.html">Αρχική</a>
-                    <a href="categories.html">Κατηγορίες</a>
                     <a href="inspiration.html">Έμπνευση</a>
                     <a href="story.html">Η Ιστορία μας</a>
                     <a href="contact.html">Επικοινωνία</a>
-                </div>
-                <div class="footer-col">
-                    <h5>Κατηγορίες</h5>
-                    <a href="categories.html#paint">Χρώματα</a>
-                    <a href="categories.html#tools">Εργαλεία</a>
-                    <a href="categories.html#building">Υλικά Οικοδομής</a>
-                    <a href="categories.html#locks">Κλειδαριές</a>
-                    <a href="categories.html#faucets">Μπαταρίες</a>
-                    <a href="categories.html#curtains">Κουρτινόβεργες</a>
                 </div>
                 <div class="footer-col">
                     <h5>Επικοινωνία</h5>
@@ -251,6 +271,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- Category Popup -->
+    <div class="category-popup-overlay" id="categoryPopup">
+        <div class="category-popup">
+            <button class="category-popup-close" id="popupClose">&times;</button>
+            <h3 class="category-popup-title" id="popupTitle"></h3>
+            <ul class="category-popup-list" id="popupList"></ul>
+            <a href="contact.html" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%; justify-content: center;">
+                <span>Επικοινωνήστε μαζί μας</span>
+            </a>
+        </div>
+    </div>
 
     <!-- WhatsApp Float -->
     <a href="https://wa.me/306944282790" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
