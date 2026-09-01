@@ -68,30 +68,41 @@
 <body>
     <div class="error-page">
         <div class="error-content">
-            <a href="index.html" style="display: inline-block; margin-bottom: 3rem;">
+            <a href="index.html" style="display: inline-block; margin-bottom: 2rem;">
                 <img src="LIAKOPOULOS_casa_LOGO_for_web.png" alt="Liakopoulos Casa" style="height: 50px; width: auto;">
             </a>
+
+            <div style="margin-bottom: 2rem;">
+                <div class="lang-switcher" id="langSwitcher" role="group" aria-label="Language selection" style="display: inline-flex;">
+                    <button class="lang-btn active" data-lang="el" type="button" title="Ελληνικά">ΕΛ</button>
+                    <span class="lang-divider" aria-hidden="true">/</span>
+                    <button class="lang-btn" data-lang="en" type="button" title="English">EN</button>
+                    <span class="lang-divider" aria-hidden="true">/</span>
+                    <button class="lang-btn" data-lang="it" type="button" title="Italiano">IT</button>
+                </div>
+            </div>
             
             <div class="error-code">404</div>
-            <h1 class="error-title">Η σελίδα δεν βρέθηκε</h1>
-            <p class="error-desc">
+            <h1 class="error-title" data-i18n="error_title">Η σελίδα δεν βρέθηκε</h1>
+            <p class="error-desc" data-i18n="error_desc">
                 Η σελίδα που ψάχνετε δεν υπάρχει ή έχει μετακινηθεί. 
                 Επιστρέψτε στην αρχική ή εξερευνήστε τις κατηγορίες μας.
             </p>
             
             <div class="error-links">
                 <a href="index.html" class="btn btn-primary">
-                    <span>Αρχική Σελίδα</span>
+                    <span data-i18n="error_home_btn">Αρχική Σελίδα</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                         <polyline points="9,22 9,12 15,12 15,22"/>
                     </svg>
                 </a>
                 <a href="categories.html" class="btn btn-ghost" style="border-color: var(--color-border); color: var(--color-text);">
-                    <span>Κατηγορίες</span>
+                    <span data-i18n="nav_categories">Κατηγορίες</span>
                 </a>
             </div>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>

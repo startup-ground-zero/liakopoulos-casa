@@ -55,30 +55,37 @@
             </a>
 
             <div class="nav-links" id="navLinks">
-                <a href="index.html" class="nav-link" data-text="Αρχική">Αρχική</a>
-                <a href="inspiration.html" class="nav-link active" data-text="Έμπνευση">Έμπνευση</a>
-                <a href="story.html" class="nav-link" data-text="Η Ιστορία μας">Η Ιστορία μας</a>
-                <a href="contact.html" class="nav-link" data-text="Επικοινωνία">Επικοινωνία</a>
+                <a href="index.html" class="nav-link" data-text="Αρχική" data-i18n="nav_home" data-i18n-text="nav_home">Αρχική</a>
+                <a href="inspiration.html" class="nav-link active" data-text="Έμπνευση" data-i18n="nav_inspiration" data-i18n-text="nav_inspiration">Έμπνευση</a>
+                <a href="story.html" class="nav-link" data-text="Η Ιστορία μας" data-i18n="nav_story" data-i18n-text="nav_story">Η Ιστορία μας</a>
+                <a href="contact.html" class="nav-link" data-text="Επικοινωνία" data-i18n="nav_contact" data-i18n-text="nav_contact">Επικοινωνία</a>
             </div>
 
             <div class="nav-right">
                 <div class="nav-search" id="navSearch">
-                    <button class="nav-search-btn" id="searchToggle" aria-label="Αναζήτηση">
+                    <button class="nav-search-btn" id="searchToggle" aria-label="Αναζήτηση" data-i18n-attr="aria-label:search_aria">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
                     </button>
                     <div class="nav-search-box" id="searchBox">
-                        <input type="text" id="searchInput" placeholder="Αναζήτηση κατηγορίας..." autocomplete="off">
+                        <input type="text" id="searchInput" placeholder="Αναζήτηση κατηγορίας..." data-i18n-placeholder="search_placeholder" autocomplete="off">
                         <div class="search-results" id="searchResults"></div>
                     </div>
                 </div>
-                <a href="https://www.instagram.com/liakopoulos_casa/" target="_blank" rel="noopener" class="nav-social">
+                <div class="lang-switcher" id="langSwitcher" role="group" aria-label="Language selection">
+                    <button class="lang-btn active" data-lang="el" type="button" title="Ελληνικά">ΕΛ</button>
+                    <span class="lang-divider" aria-hidden="true">/</span>
+                    <button class="lang-btn" data-lang="en" type="button" title="English">EN</button>
+                    <span class="lang-divider" aria-hidden="true">/</span>
+                    <button class="lang-btn" data-lang="it" type="button" title="Italiano">IT</button>
+                </div>
+                <a href="https://www.instagram.com/liakopoulos_casa/" target="_blank" rel="noopener" class="nav-social" aria-label="Instagram">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                         <rect x="2" y="2" width="20" height="20" rx="5"/>
                         <circle cx="12" cy="12" r="5"/>
                         <circle cx="17.5" cy="6.5" r="1.5"/>
                     </svg>
                 </a>
-                <a href="https://www.facebook.com/liakopouloscasa" target="_blank" rel="noopener" class="nav-social">
+                <a href="https://www.facebook.com/liakopouloscasa" target="_blank" rel="noopener" class="nav-social" aria-label="Facebook">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                     </svg>
@@ -95,10 +102,15 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-inner">
-            <a href="index.html" class="mobile-link">Αρχική</a>
-            <a href="inspiration.html" class="mobile-link active">Έμπνευση</a>
-            <a href="story.html" class="mobile-link">Η Ιστορία μας</a>
-            <a href="contact.html" class="mobile-link">Επικοινωνία</a>
+            <a href="index.html" class="mobile-link" data-i18n="nav_home">Αρχική</a>
+            <a href="inspiration.html" class="mobile-link active" data-i18n="nav_inspiration">Έμπνευση</a>
+            <a href="story.html" class="mobile-link" data-i18n="nav_story">Η Ιστορία μας</a>
+            <a href="contact.html" class="mobile-link" data-i18n="nav_contact">Επικοινωνία</a>
+            <div class="mobile-lang-switcher" role="group" aria-label="Language selection">
+                <button class="mobile-lang-btn active" data-lang="el" type="button">Ελληνικά</button>
+                <button class="mobile-lang-btn" data-lang="en" type="button">English</button>
+                <button class="mobile-lang-btn" data-lang="it" type="button">Italiano</button>
+            </div>
         </div>
     </div>
 
@@ -106,9 +118,9 @@
         <!-- Inspiration Hero -->
         <section class="category-hero" style="background: var(--color-bg-dark); color: white;">
             <div class="hero-bg-grain"></div>
-            <span class="section-label reveal-up">Έμπνευση</span>
-            <h1 class="section-title reveal-up" style="color: white; --delay: 0.2s">Ιδέες που<br>ζωντανεύουν</h1>
-            <p class="section-desc reveal-up" style="color: rgba(255,255,255,0.7); max-width: 550px; margin: 1rem auto 0; --delay: 0.4s">
+            <span class="section-label reveal-up" data-i18n="insp_page_label">Έμπνευση</span>
+            <h1 class="section-title reveal-up" style="color: white; --delay: 0.2s" data-i18n="insp_page_title">Ιδέες που<br>ζωντανεύουν</h1>
+            <p class="section-desc reveal-up" style="color: rgba(255,255,255,0.7); max-width: 550px; margin: 1rem auto 0; --delay: 0.4s" data-i18n="insp_page_desc">
                 Ανακαλύψτε τάσεις, συνδυασμούς χρωμάτων, υλικών και λύσεις διακόσμησης από τους ειδικούς μας
             </p>
         </section>
@@ -119,27 +131,27 @@
             <article class="inspiration-article reveal-up" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; margin-bottom: 6rem;">
                 <div style="aspect-ratio: 4/3; border-radius: var(--radius-xl); overflow: hidden; background: url('https://images.unsplash.com/photo-1615873968403-89e068629265?w=800&h=600&fit=crop') center/cover;"></div>
                 <div>
-                    <span class="section-label">Χρώματα 2025</span>
-                    <h2 style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 300; line-height: 1.2; margin: 1rem 0 1.5rem;">Οι αποχρώσεις που θα κυριαρχήσουν</h2>
-                    <p style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.8; margin-bottom: 2rem;">
+                    <span class="section-label" data-i18n="insp_art1_label">Χρώματα 2025</span>
+                    <h2 style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 300; line-height: 1.2; margin: 1rem 0 1.5rem;" data-i18n="insp_art1_title">Οι αποχρώσεις που θα κυριαρχήσουν</h2>
+                    <p style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.8; margin-bottom: 2rem;" data-i18n="insp_art1_desc">
                         Η φύση εμπνέει τις κυρίαρχες αποχρώσεις: γήινα χρώματα, ζεστά terracotta, βαθιά πράσινα και γαλήνια blues. Ανακαλύψτε πώς να τα εντάξετε στον χώρο σας με ισορροπία και στυλ.
                     </p>
                     <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
                         <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9rem; color: var(--color-text-light);">
                             <span style="width: 24px; height: 24px; border-radius: 50%; background: #B87333; flex-shrink: 0;"></span>
-                            Terracotta Warmth
+                            <span data-i18n="insp_color_1">Terracotta Warmth</span>
                         </li>
                         <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9rem; color: var(--color-text-light);">
                             <span style="width: 24px; height: 24px; border-radius: 50%; background: #2F4F4F; flex-shrink: 0;"></span>
-                            Deep Forest Green
+                            <span data-i18n="insp_color_2">Deep Forest Green</span>
                         </li>
                         <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9rem; color: var(--color-text-light);">
                             <span style="width: 24px; height: 24px; border-radius: 50%; background: #4682B4; flex-shrink: 0;"></span>
-                            Serene Blue
+                            <span data-i18n="insp_color_3">Serene Blue</span>
                         </li>
                         <li style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; color: var(--color-text-light);">
                             <span style="width: 24px; height: 24px; border-radius: 50%; background: #F5E6D3; flex-shrink: 0; border: 1px solid var(--color-border);"></span>
-                            Warm Vanilla
+                            <span data-i18n="insp_color_4">Warm Vanilla</span>
                         </li>
                     </ul>
                 </div>
@@ -148,16 +160,16 @@
             <!-- Article 2 - Reversed -->
             <article class="inspiration-article reveal-up" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center; margin-bottom: 6rem;">
                 <div>
-                    <span class="section-label">Κήπος</span>
-                    <h2 style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 300; line-height: 1.2; margin: 1rem 0 1.5rem;">Δημιουργήστε τον δικό σας παράδεισο</h2>
-                    <p style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.8; margin-bottom: 2rem;">
+                    <span class="section-label" data-i18n="insp_art2_label">Κήπος</span>
+                    <h2 style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 300; line-height: 1.2; margin: 1rem 0 1.5rem;" data-i18n="insp_art2_title">Δημιουργήστε τον δικό σας παράδεισο</h2>
+                    <p style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.8; margin-bottom: 2rem;" data-i18n="insp_art2_desc">
                         Μετατρέψτε τον εξωτερικό σας χώρο σε μια όαση χαλάρωσης. Από αρδευτικά συστήματα μέχρι διακοσμητικά στοιχεία, γλάστρες και φωτισμό — έχουμε ό,τι χρειάζεστε.
                     </p>
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <span style="padding: 0.5rem 1rem; background: var(--color-bg-warm); border-radius: 20px; font-size: 0.8rem; color: var(--color-text-light);">Αρδευτικά</span>
-                        <span style="padding: 0.5rem 1rem; background: var(--color-bg-warm); border-radius: 20px; font-size: 0.8rem; color: var(--color-text-light);">Γλάστρες</span>
-                        <span style="padding: 0.5rem 1rem; background: var(--color-bg-warm); border-radius: 20px; font-size: 0.8rem; color: var(--color-text-light);">Φωτισμός</span>
-                        <span style="padding: 0.5rem 1rem; background: var(--color-bg-warm); border-radius: 20px; font-size: 0.8rem; color: var(--color-text-light);">Έπιπλα Κήπου</span>
+                        <span style="padding: 0.5rem 1rem; background: var(--color-bg-warm); border-radius: 20px; font-size: 0.8rem; color: var(--color-text-light);" data-i18n="insp_tag_irrigation">Αρδευτικά</span>
+                        <span style="padding: 0.5rem 1rem; background: var(--color-bg-warm); border-radius: 20px; font-size: 0.8rem; color: var(--color-text-light);" data-i18n="insp_tag_pots">Γλάστρες</span>
+                        <span style="padding: 0.5rem 1rem; background: var(--color-bg-warm); border-radius: 20px; font-size: 0.8rem; color: var(--color-text-light);" data-i18n="insp_tag_lighting">Φωτισμός</span>
+                        <span style="padding: 0.5rem 1rem; background: var(--color-bg-warm); border-radius: 20px; font-size: 0.8rem; color: var(--color-text-light);" data-i18n="insp_tag_furniture">Έπιπλα Κήπου</span>
                     </div>
                 </div>
                 <div style="aspect-ratio: 4/3; border-radius: var(--radius-xl); overflow: hidden; background: url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&h=600&fit=crop') center/cover;"></div>
@@ -167,13 +179,13 @@
             <article class="inspiration-article reveal-up" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; margin-bottom: 6rem;">
                 <div style="aspect-ratio: 4/3; border-radius: var(--radius-xl); overflow: hidden; background: url('https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop') center/cover;"></div>
                 <div>
-                    <span class="section-label">Μπάνιο</span>
-                    <h2 style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 300; line-height: 1.2; margin: 1rem 0 1.5rem;">Το Μπάνιο</h2>
-                    <p style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.8; margin-bottom: 2rem;">
+                    <span class="section-label" data-i18n="insp_art3_label">Μπάνιο</span>
+                    <h2 style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 300; line-height: 1.2; margin: 1rem 0 1.5rem;" data-i18n="insp_art3_title">Το Μπάνιο</h2>
+                    <p style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.8; margin-bottom: 2rem;" data-i18n="insp_art3_desc">
                         Μπαταρίες premium ποιότητας, πλακάκια μεγάλων διαστάσεων, ντουζιέρες walk-in. Δημιουργήστε ένα μπάνιο που εμπνέει χαλάρωση και πολυτέλεια.
                     </p>
                     <a href="contact.html" class="link-arrow">
-                        <span>Επικοινωνήστε μαζί μας</span>
+                        <span data-i18n="popup_contact_btn">Επικοινωνήστε μαζί μας</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
@@ -184,13 +196,13 @@
             <!-- Article 4 - Reversed -->
             <article class="inspiration-article reveal-up" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center; margin-bottom: 6rem;">
                 <div>
-                    <span class="section-label">Τζάκι</span>
-                    <h2 style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 300; line-height: 1.2; margin: 1rem 0 1.5rem;">Η ζεστασιά του τζακιού</h2>
-                    <p style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.8; margin-bottom: 2rem;">
+                    <span class="section-label" data-i18n="insp_art4_label">Τζάκι</span>
+                    <h2 style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 300; line-height: 1.2; margin: 1rem 0 1.5rem;" data-i18n="insp_art4_title">Η ζεστασιά του τζακιού</h2>
+                    <p style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.8; margin-bottom: 2rem;" data-i18n="insp_art4_desc">
                         Ένα τζάκι δεν είναι μόνο πηγή θέρμανσης — είναι η καρδιά του σπιτιού. Ενεργειακά τζάκια, μοντέρνες σόμπες πέλλετ, και αξεσουάρ που συνδυάζουν λειτουργικότητα με αισθητική.
                     </p>
                     <a href="contact.html" class="link-arrow">
-                        <span>Επικοινωνήστε μαζί μας</span>
+                        <span data-i18n="popup_contact_btn">Επικοινωνήστε μαζί μας</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
@@ -206,25 +218,25 @@
         <section style="padding: var(--space-xl) var(--container-padding); background: var(--color-bg-warm);">
             <div style="max-width: var(--container-max); margin: 0 auto;">
                 <div class="section-header centered">
-                    <span class="section-label reveal-up">Συμβουλές</span>
-                    <h2 class="section-title reveal-up">Tips από τους<br>ειδικούς μας</h2>
+                    <span class="section-label reveal-up" data-i18n="tips_label">Συμβουλές</span>
+                    <h2 class="section-title reveal-up" data-i18n="tips_title">Tips από τους<br>ειδικούς μας</h2>
                 </div>
 
                 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;" class="stagger-children">
                     <div style="padding: 2.5rem; background: white; border-radius: var(--radius-lg);">
                         <span style="display: block; font-family: var(--font-display); font-size: 3rem; color: var(--color-accent); margin-bottom: 1.5rem;">01</span>
-                        <h4 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 1rem;">Δοκιμάστε πρώτα</h4>
-                        <p style="font-size: 0.9rem; color: var(--color-text-light); line-height: 1.7;">Πάντα δοκιμάζετε το χρώμα σε μικρή επιφάνεια. Η φωτεινότητα του χώρου αλλάζει δραματικά την απόχρωση.</p>
+                        <h4 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 1rem;" data-i18n="tip_1_title">Δοκιμάστε πρώτα</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-text-light); line-height: 1.7;" data-i18n="tip_1_desc">Πάντα δοκιμάζετε το χρώμα σε μικρή επιφάνεια. Η φωτεινότητα του χώρου αλλάζει δραματικά την απόχρωση.</p>
                     </div>
                     <div style="padding: 2.5rem; background: white; border-radius: var(--radius-lg);">
                         <span style="display: block; font-family: var(--font-display); font-size: 3rem; color: var(--color-accent); margin-bottom: 1.5rem;">02</span>
-                        <h4 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 1rem;">Σκεφτείτε μακροπρόθεσμα</h4>
-                        <p style="font-size: 0.9rem; color: var(--color-text-light); line-height: 1.7;">Επενδύστε σε ποιοτικά υλικά. Ένα καλό πλακάκι ή ένα ποιοτικό χρώμα αντέχει χρόνια.</p>
+                        <h4 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 1rem;" data-i18n="tip_2_title">Σκεφτείτε μακροπρόθεσμα</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-text-light); line-height: 1.7;" data-i18n="tip_2_desc">Επενδύστε σε ποιοτικά υλικά. Ένα καλό πλακάκι ή ένα ποιοτικό χρώμα αντέχει χρόνια.</p>
                     </div>
                     <div style="padding: 2.5rem; background: white; border-radius: var(--radius-lg);">
                         <span style="display: block; font-family: var(--font-display); font-size: 3rem; color: var(--color-accent); margin-bottom: 1.5rem;">03</span>
-                        <h4 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 1rem;">Ρωτήστε τους ειδικούς</h4>
-                        <p style="font-size: 0.9rem; color: var(--color-text-light); line-height: 1.7;">Μη διστάζετε να ρωτήσετε. Η ομάδα μας είναι εδώ για να σας καθοδηγήσει σε κάθε επιλογή.</p>
+                        <h4 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 1rem;" data-i18n="tip_3_title">Ρωτήστε τους ειδικούς</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-text-light); line-height: 1.7;" data-i18n="tip_3_desc">Μη διστάζετε να ρωτήσετε. Η ομάδα μας είναι εδώ για να σας καθοδηγήσει σε κάθε επιλογή.</p>
                     </div>
                 </div>
             </div>
@@ -233,10 +245,10 @@
         <!-- CTA -->
         <section style="padding: var(--space-xl) var(--container-padding); text-align: center;">
             <div class="reveal-up">
-                <h2 class="section-title" style="margin-bottom: 1.5rem;">Χρειάζεστε<br>βοήθεια;</h2>
-                <p class="section-desc" style="margin: 0 auto 2rem; text-align: center;">Οι ειδικοί μας θα σας βοηθήσουν να βρείτε τις ιδανικές λύσεις</p>
+                <h2 class="section-title" style="margin-bottom: 1.5rem;" data-i18n="cta_help_title">Χρειάζεστε<br>βοήθεια;</h2>
+                <p class="section-desc" style="margin: 0 auto 2rem; text-align: center;" data-i18n="cta_help_desc">Οι ειδικοί μας θα σας βοηθήσουν να βρείτε τις ιδανικές λύσεις</p>
                 <a href="contact.html" class="btn btn-primary">
-                    <span>Επικοινωνήστε μαζί μας</span>
+                    <span data-i18n="popup_contact_btn">Επικοινωνήστε μαζί μας</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M7 17L17 7M17 7H7M17 7V17"/>
                     </svg>
@@ -248,6 +260,50 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-top">
+            <div class="footer-brand">
+                <img src="LIAKOPOULOS_casa_LOGO_for_web.png" alt="Liakopoulos Casa" class="footer-logo-img">
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h5 data-i18n="footer_nav_title">Πλοήγηση</h5>
+                    <a href="index.html" data-i18n="nav_home">Αρχική</a>
+                    <a href="inspiration.html" data-i18n="nav_inspiration">Έμπνευση</a>
+                    <a href="story.html" data-i18n="nav_story">Η Ιστορία μας</a>
+                    <a href="contact.html" data-i18n="nav_contact">Επικοινωνία</a>
+                </div>
+                <div class="footer-col">
+                    <h5 data-i18n="footer_contact_title">Επικοινωνία</h5>
+                    <a href="tel:+302610995375">2610 995375</a>
+                    <a href="mailto:info@liakopoulos-casa.gr">info@liakopoulos-casa.gr</a>
+                    <a href="https://www.google.com/maps/dir//Liakopoulos-casa,+%CE%A7%CF%81%CE%AE%CF%83%CF%84%CE%BF%CF%85+%CE%A0%CE%B1%CE%BD%CE%B1%CE%B3%CF%8C%CF%80%CE%BF%CF%85%CE%BB%CE%BF%CF%85,+%CE%A0%CE%B1%CF%84%CF%81%CF%8E%CE%BD+5,+Rio+265+04,+Greece/@38.2944252,21.7857086,794m/data=!3m1!1e3!4m18!1m8!3m7!1s0x135e4bdd6a5a8429:0x2d9d6cd6109ecf01!2sLiakopoulos-casa!8m2!3d38.2941835!4d21.7888122!15sCj3Op8-Bzq7Pg8-Ezr_PhSDOoM6xzr3Osc6zz4zPgM6_z4XOu86_z4UgNSwgzqHOr86_LCDOoM6sz4TPgc6xWj0iO8-Hz4HOrs-Dz4TOv8-FIM-AzrHOvc6xzrPPjM-Azr_Phc67zr_PhSA1IM-Bzq_OvyDPgM6sz4TPgc6xkgESaW50ZXJpb3JfZGVjb3JhdG9y4AEA!16s%2Fg%2F11mp6d9f2h!4m8!1m0!1m5!1m1!1s0x135e4bdd6a5a8429:0x2d9d6cd6109ecf01!2m2!1d21.7888122!2d38.2941835!3e0" target="_blank" rel="noopener" data-i18n="footer_address">Χρήστου Παναγόπουλου 5, Ρίο, Πάτρα</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span data-i18n="footer_rights">&copy; 2025 Liakopoulos Casa. Με επιφύλαξη παντός δικαιώματος.</span>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/liakopoulos_casa/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="2" width="20" height="20" rx="5"/>
+                        <circle cx="12" cy="12" r="5"/>
+                        <circle cx="17.5" cy="6.5" r="1.5"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Category Popup -->
+    <div class="category-popup-overlay" id="categoryPopup">
+        <div class="category-popup">
+            <button class="category-popup-close" id="popupClose">&times;</button>
+            <h3 class="category-popup-title" id="popupTitle"></h3>
+            <ul class="category-popup-list" id="popupList"></ul>
+            <a href="contact.html" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%; justify-content: center;">
+                <span data-i18n="popup_contact_btn">Επικοινωνήστε μαζί μας</span>
+            </a>
+        </div>
+    </div>
             <div class="footer-brand">
                 <img src="LIAKOPOULOS_casa_LOGO_for_web.png" alt="Liakopoulos Casa" class="footer-logo-img">
             </div>

@@ -52,30 +52,37 @@
             </a>
 
             <div class="nav-links" id="navLinks">
-                <a href="index.html" class="nav-link" data-text="Αρχική">Αρχική</a>
-                <a href="inspiration.html" class="nav-link" data-text="Έμπνευση">Έμπνευση</a>
-                <a href="story.html" class="nav-link" data-text="Η Ιστορία μας">Η Ιστορία μας</a>
-                <a href="contact.html" class="nav-link active" data-text="Επικοινωνία">Επικοινωνία</a>
+                <a href="index.html" class="nav-link" data-text="Αρχική" data-i18n="nav_home" data-i18n-text="nav_home">Αρχική</a>
+                <a href="inspiration.html" class="nav-link" data-text="Έμπνευση" data-i18n="nav_inspiration" data-i18n-text="nav_inspiration">Έμπνευση</a>
+                <a href="story.html" class="nav-link" data-text="Η Ιστορία μας" data-i18n="nav_story" data-i18n-text="nav_story">Η Ιστορία μας</a>
+                <a href="contact.html" class="nav-link active" data-text="Επικοινωνία" data-i18n="nav_contact" data-i18n-text="nav_contact">Επικοινωνία</a>
             </div>
 
             <div class="nav-right">
                 <div class="nav-search" id="navSearch">
-                    <button class="nav-search-btn" id="searchToggle" aria-label="Αναζήτηση">
+                    <button class="nav-search-btn" id="searchToggle" aria-label="Αναζήτηση" data-i18n-attr="aria-label:search_aria">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
                     </button>
                     <div class="nav-search-box" id="searchBox">
-                        <input type="text" id="searchInput" placeholder="Αναζήτηση κατηγορίας..." autocomplete="off">
+                        <input type="text" id="searchInput" placeholder="Αναζήτηση κατηγορίας..." data-i18n-placeholder="search_placeholder" autocomplete="off">
                         <div class="search-results" id="searchResults"></div>
                     </div>
                 </div>
-                <a href="https://www.instagram.com/liakopoulos_casa/" target="_blank" rel="noopener" class="nav-social">
+                <div class="lang-switcher" id="langSwitcher" role="group" aria-label="Language selection">
+                    <button class="lang-btn active" data-lang="el" type="button" title="Ελληνικά">ΕΛ</button>
+                    <span class="lang-divider" aria-hidden="true">/</span>
+                    <button class="lang-btn" data-lang="en" type="button" title="English">EN</button>
+                    <span class="lang-divider" aria-hidden="true">/</span>
+                    <button class="lang-btn" data-lang="it" type="button" title="Italiano">IT</button>
+                </div>
+                <a href="https://www.instagram.com/liakopoulos_casa/" target="_blank" rel="noopener" class="nav-social" aria-label="Instagram">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                         <rect x="2" y="2" width="20" height="20" rx="5"/>
                         <circle cx="12" cy="12" r="5"/>
                         <circle cx="17.5" cy="6.5" r="1.5"/>
                     </svg>
                 </a>
-                <a href="https://www.facebook.com/liakopouloscasa" target="_blank" rel="noopener" class="nav-social">
+                <a href="https://www.facebook.com/liakopouloscasa" target="_blank" rel="noopener" class="nav-social" aria-label="Facebook">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                     </svg>
@@ -92,10 +99,15 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-inner">
-            <a href="index.html" class="mobile-link">Αρχική</a>
-            <a href="inspiration.html" class="mobile-link">Έμπνευση</a>
-            <a href="story.html" class="mobile-link">Η Ιστορία μας</a>
-            <a href="contact.html" class="mobile-link active">Επικοινωνία</a>
+            <a href="index.html" class="mobile-link" data-i18n="nav_home">Αρχική</a>
+            <a href="inspiration.html" class="mobile-link" data-i18n="nav_inspiration">Έμπνευση</a>
+            <a href="story.html" class="mobile-link" data-i18n="nav_story">Η Ιστορία μας</a>
+            <a href="contact.html" class="mobile-link active" data-i18n="nav_contact">Επικοινωνία</a>
+            <div class="mobile-lang-switcher" role="group" aria-label="Language selection">
+                <button class="mobile-lang-btn active" data-lang="el" type="button">Ελληνικά</button>
+                <button class="mobile-lang-btn" data-lang="en" type="button">English</button>
+                <button class="mobile-lang-btn" data-lang="it" type="button">Italiano</button>
+            </div>
         </div>
     </div>
 
@@ -105,9 +117,9 @@
             <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(184,134,11,0.08) 0%, transparent 60%);"></div>
             <div style="position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&h=900&fit=crop') center/cover no-repeat; opacity: 0.08;"></div>
             <div style="position: relative; max-width: var(--container-max); margin: 0 auto; text-align: center;">
-                <span class="section-label reveal-up" style="color: var(--color-accent);">Επικοινωνία</span>
-                <h1 class="section-title reveal-up" style="--delay: 0.2s; color: white; font-size: clamp(2.5rem, 5vw, 4rem);">Σας περιμένουμε</h1>
-                <p class="section-desc reveal-up" style="max-width: 500px; margin: 1.5rem auto 0; --delay: 0.4s; color: rgba(255,255,255,0.6); font-size: 1.1rem;">
+                <span class="section-label reveal-up" style="color: var(--color-accent);" data-i18n="contact_page_label">Επικοινωνία</span>
+                <h1 class="section-title reveal-up" style="--delay: 0.2s; color: white; font-size: clamp(2.5rem, 5vw, 4rem);" data-i18n="contact_hero_title">Σας περιμένουμε</h1>
+                <p class="section-desc reveal-up" style="max-width: 500px; margin: 1.5rem auto 0; --delay: 0.4s; color: rgba(255,255,255,0.6); font-size: 1.1rem;" data-i18n="contact_hero_desc">
                     Ελάτε να εξερευνήσουμε μαζί τις λύσεις για τον χώρο σας
                 </p>
             </div>
@@ -136,7 +148,7 @@
             <div class="contact-info">
                 <!-- Info Card with dark background -->
                 <div class="reveal-up" style="background: var(--color-bg-dark); border-radius: var(--radius-lg); padding: 2.5rem; margin-bottom: 2rem;">
-                    <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: white; margin-bottom: 1.5rem;">Επισκεφθείτε μας</h3>
+                    <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: white; margin-bottom: 1.5rem;" data-i18n="contact_visit_title">Επισκεφθείτε μας</h3>
                     
                     <div style="display: flex; flex-direction: column; gap: 1.5rem;">
                         <div style="display: flex; gap: 1rem; align-items: flex-start;">
@@ -144,8 +156,8 @@
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                             </div>
                             <div>
-                                <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5);">Διεύθυνση</span>
-                                <a href="https://www.google.com/maps/dir//Liakopoulos-casa,+%CE%A7%CF%81%CE%AE%CF%83%CF%84%CE%BF%CF%85+%CE%A0%CE%B1%CE%BD%CE%B1%CE%B3%CF%8C%CF%80%CE%BF%CF%85%CE%BB%CE%BF%CF%85,+%CE%A0%CE%B1%CF%84%CF%81%CF%8E%CE%BD+5,+Rio+265+04,+Greece/@38.2944252,21.7857086,794m/data=!3m1!1e3!4m18!1m8!3m7!1s0x135e4bdd6a5a8429:0x2d9d6cd6109ecf01!2sLiakopoulos-casa!8m2!3d38.2941835!4d21.7888122!15sCj3Op8-Bzq7Pg8-Ezr_PhSDOoM6xzr3Osc6zz4zPgM6_z4XOu86_z4UgNSwgzqHOr86_LCDOoM6sz4TPgc6xWj0iO8-Hz4HOrs-Dz4TOv8-FIM-AzrHOvc6xzrPPjM-Azr_Phc67zr_PhSA1IM-Bzq_OvyDPgM6sz4TPgc6xkgESaW50ZXJpb3JfZGVjb3JhdG9y4AEA!16s%2Fg%2F11mp6d9f2h!4m8!1m0!1m5!1m1!1s0x135e4bdd6a5a8429:0x2d9d6cd6109ecf01!2m2!1d21.7888122!2d38.2941835!3e0" target="_blank" rel="noopener" style="display: block; color: rgba(255,255,255,0.85); margin-top: 0.3rem; line-height: 1.6; cursor: pointer; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.3); text-underline-offset: 3px; transition: text-decoration-color 0.3s;" onmouseover="this.style.textDecorationColor='var(--color-accent)'" onmouseout="this.style.textDecorationColor='rgba(255,255,255,0.3)'">Χρήστου Παναγόπουλου 5<br>Ρίο, 265 04, Πάτρα</a>
+                                <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5);" data-i18n="contact_address_label">Διεύθυνση</span>
+                                <a href="https://www.google.com/maps/dir//Liakopoulos-casa,+%CE%A7%CF%81%CE%AE%CF%83%CF%84%CE%BF%CF%85+%CE%A0%CE%B1%CE%BD%CE%B1%CE%B3%CF%8C%CF%80%CE%BF%CF%85%CE%BB%CE%BF%CF%85,+%CE%A0%CE%B1%CF%84%CF%81%CF%8E%CE%BD+5,+Rio+265+04,+Greece/@38.2944252,21.7857086,794m/data=!3m1!1e3!4m18!1m8!3m7!1s0x135e4bdd6a5a8429:0x2d9d6cd6109ecf01!2sLiakopoulos-casa!8m2!3d38.2941835!4d21.7888122!15sCj3Op8-Bzq7Pg8-Ezr_PhSDOoM6xzr3Osc6zz4zPgM6_z4XOu86_z4UgNSwgzqHOr86_LCDOoM6sz4TPgc6xWj0iO8-Hz4HOrs-Dz4TOv8-FIM-AzrHOvc6xzrPPjM-Azr_Phc67zr_PhSA1IM-Bzq_OvyDPgM6sz4TPgc6xkgESaW50ZXJpb3JfZGVjb3JhdG9y4AEA!16s%2Fg%2F11mp6d9f2h!4m8!1m0!1m5!1m1!1s0x135e4bdd6a5a8429:0x2d9d6cd6109ecf01!2m2!1d21.7888122!2d38.2941835!3e0" target="_blank" rel="noopener" style="display: block; color: rgba(255,255,255,0.85); margin-top: 0.3rem; line-height: 1.6; cursor: pointer; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.3); text-underline-offset: 3px; transition: text-decoration-color 0.3s;" onmouseover="this.style.textDecorationColor='var(--color-accent)'" onmouseout="this.style.textDecorationColor='rgba(255,255,255,0.3)'" data-i18n="contact_address_val">Χρήστου Παναγόπουλου 5<br>Ρίο, 265 04, Πάτρα</a>
                             </div>
                         </div>
                         
@@ -154,7 +166,7 @@
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
                             </div>
                             <div>
-                                <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5);">Τηλέφωνο</span>
+                                <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5);" data-i18n="contact_phone_label">Τηλέφωνο</span>
                                 <a href="tel:+302610995375" style="display: block; color: white; margin-top: 0.3rem; font-size: 1.1rem; font-weight: 500; cursor: pointer; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.3); text-underline-offset: 3px; transition: text-decoration-color 0.3s;" onmouseover="this.style.textDecorationColor='var(--color-accent)'" onmouseout="this.style.textDecorationColor='rgba(255,255,255,0.3)'">2610 995375</a>
                             </div>
                         </div>
@@ -164,8 +176,8 @@
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                             </div>
                             <div>
-                                <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5);">Ωράριο</span>
-                                <p style="color: rgba(255,255,255,0.85); margin-top: 0.3rem; line-height: 1.8; font-size: 0.9rem;">
+                                <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5);" data-i18n="contact_hours_label">Ωράριο</span>
+                                <p style="color: rgba(255,255,255,0.85); margin-top: 0.3rem; line-height: 1.8; font-size: 0.9rem;" data-i18n="contact_hours_val">
                                     Δευ - Παρ: 08:00 - 20:00<br>
                                     Σάββατο: 08:00 - 15:00<br>
                                     <span style="color: rgba(255,255,255,0.4);">Κυριακή: Κλειστά</span>
@@ -179,9 +191,9 @@
                 <div class="reveal-up" style="--delay: 0.2s; background: var(--color-bg-warm); border-radius: var(--radius-lg); padding: 2rem; border: 1px solid var(--color-border);">
                     <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem;">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-1"/><path d="M1 16h15"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="14.5" cy="18.5" r="2.5"/></svg>
-                        <h4 style="font-family: var(--font-heading); font-size: 1rem; font-weight: 600;">Δωρεάν Parking</h4>
+                        <h4 style="font-family: var(--font-heading); font-size: 1rem; font-weight: 600;" data-i18n="contact_parking_title">Δωρεάν Parking</h4>
                     </div>
-                    <p style="font-size: 0.88rem; color: var(--color-text-light); line-height: 1.7;">
+                    <p style="font-size: 0.88rem; color: var(--color-text-light); line-height: 1.7;" data-i18n="contact_parking_desc">
                         Ιδιωτικός χώρος στάθμευσης ακριβώς δίπλα στο κατάστημά μας. Εύκολη πρόσβαση από τον κεντρικό δρόμο.
                     </p>
                 </div>
@@ -204,33 +216,33 @@
 
                 <!-- Contact Form -->
                 <div class="reveal-up" style="--delay: 0.2s; margin-top: 2.5rem; background: white; border-radius: var(--radius-lg); padding: 2.5rem; border: 1px solid var(--color-border); box-shadow: 0 10px 40px rgba(0,0,0,0.04);">
-                    <h3 style="font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 0.5rem;">Στείλτε μας μήνυμα</h3>
-                    <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 2rem;">Θα σας απαντήσουμε εντός 24 ωρών</p>
+                    <h3 style="font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 0.5rem;" data-i18n="form_title">Στείλτε μας μήνυμα</h3>
+                    <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 2rem;" data-i18n="form_subtitle">Θα σας απαντήσουμε εντός 24 ωρών</p>
                     
                     <form class="contact-form" id="contactForm" style="display: flex; flex-direction: column; gap: 1.2rem;" action="https://formspree.io/f/xwvgzeln" method="POST">
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                             <div>
-                                <label style="display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-light); margin-bottom: 0.4rem;">Όνομα *</label>
+                                <label style="display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-light); margin-bottom: 0.4rem;" data-i18n="form_name">Όνομα *</label>
                                 <input type="text" name="name" required style="width: 100%; padding: 0.9rem 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: var(--font-body); font-size: 0.9rem; background: var(--color-bg); transition: border-color 0.3s, box-shadow 0.3s; outline: none;" onfocus="this.style.borderColor='var(--color-accent)';this.style.boxShadow='0 0 0 3px rgba(184,134,11,0.1)'" onblur="this.style.borderColor='var(--color-border)';this.style.boxShadow='none'">
                             </div>
                             <div>
-                                <label style="display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-light); margin-bottom: 0.4rem;">Τηλέφωνο</label>
+                                <label style="display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-light); margin-bottom: 0.4rem;" data-i18n="form_phone">Τηλέφωνο</label>
                                 <input type="tel" name="phone" style="width: 100%; padding: 0.9rem 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: var(--font-body); font-size: 0.9rem; background: var(--color-bg); transition: border-color 0.3s, box-shadow 0.3s; outline: none;" onfocus="this.style.borderColor='var(--color-accent)';this.style.boxShadow='0 0 0 3px rgba(184,134,11,0.1)'" onblur="this.style.borderColor='var(--color-border)';this.style.boxShadow='none'">
                             </div>
                         </div>
                         
                         <div>
-                            <label style="display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-light); margin-bottom: 0.4rem;">Email *</label>
+                            <label style="display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-light); margin-bottom: 0.4rem;" data-i18n="form_email">Email *</label>
                             <input type="email" name="email" required style="width: 100%; padding: 0.9rem 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: var(--font-body); font-size: 0.9rem; background: var(--color-bg); transition: border-color 0.3s, box-shadow 0.3s; outline: none;" onfocus="this.style.borderColor='var(--color-accent)';this.style.boxShadow='0 0 0 3px rgba(184,134,11,0.1)'" onblur="this.style.borderColor='var(--color-border)';this.style.boxShadow='none'">
                         </div>
                         
                         <div>
-                            <label style="display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-light); margin-bottom: 0.4rem;">Μήνυμα *</label>
+                            <label style="display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-light); margin-bottom: 0.4rem;" data-i18n="form_message">Μήνυμα *</label>
                             <textarea name="message" rows="4" required style="width: 100%; padding: 0.9rem 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: var(--font-body); font-size: 0.9rem; background: var(--color-bg); resize: vertical; transition: border-color 0.3s, box-shadow 0.3s; outline: none;" onfocus="this.style.borderColor='var(--color-accent)';this.style.boxShadow='0 0 0 3px rgba(184,134,11,0.1)'" onblur="this.style.borderColor='var(--color-border)';this.style.boxShadow='none'"></textarea>
                         </div>
 
                         <button type="submit" id="submitBtn" class="btn btn-primary" style="align-self: flex-start; margin-top: 0.5rem;">
-                            <span id="submitText">Αποστολή</span>
+                            <span id="submitText" data-i18n="form_submit">Αποστολή</span>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
                             </svg>
@@ -249,22 +261,22 @@
             </div>
             <div class="footer-links">
                 <div class="footer-col">
-                    <h5>Πλοήγηση</h5>
-                    <a href="index.html">Αρχική</a>
-                    <a href="inspiration.html">Έμπνευση</a>
-                    <a href="story.html">Η Ιστορία μας</a>
-                    <a href="contact.html">Επικοινωνία</a>
+                    <h5 data-i18n="footer_nav_title">Πλοήγηση</h5>
+                    <a href="index.html" data-i18n="nav_home">Αρχική</a>
+                    <a href="inspiration.html" data-i18n="nav_inspiration">Έμπνευση</a>
+                    <a href="story.html" data-i18n="nav_story">Η Ιστορία μας</a>
+                    <a href="contact.html" data-i18n="nav_contact">Επικοινωνία</a>
                 </div>
                 <div class="footer-col">
-                    <h5>Επικοινωνία</h5>
+                    <h5 data-i18n="footer_contact_title">Επικοινωνία</h5>
                     <a href="tel:+302610995375">2610 995375</a>
                     <a href="mailto:info@liakopoulos-casa.gr">info@liakopoulos-casa.gr</a>
-                    <a href="https://www.google.com/maps/dir//Liakopoulos-casa,+%CE%A7%CF%81%CE%AE%CF%83%CF%84%CE%BF%CF%85+%CE%A0%CE%B1%CE%BD%CE%B1%CE%B3%CF%8C%CF%80%CE%BF%CF%85%CE%BB%CE%BF%CF%85,+%CE%A0%CE%B1%CF%84%CF%81%CF%8E%CE%BD+5,+Rio+265+04,+Greece/@38.2944252,21.7857086,794m/data=!3m1!1e3!4m18!1m8!3m7!1s0x135e4bdd6a5a8429:0x2d9d6cd6109ecf01!2sLiakopoulos-casa!8m2!3d38.2941835!4d21.7888122!15sCj3Op8-Bzq7Pg8-Ezr_PhSDOoM6xzr3Osc6zz4zPgM6_z4XOu86_z4UgNSwgzqHOr86_LCDOoM6sz4TPgc6xWj0iO8-Hz4HOrs-Dz4TOv8-FIM-AzrHOvc6xzrPPjM-Azr_Phc67zr_PhSA1IM-Bzq_OvyDPgM6sz4TPgc6xkgESaW50ZXJpb3JfZGVjb3JhdG9y4AEA!16s%2Fg%2F11mp6d9f2h!4m8!1m0!1m5!1m1!1s0x135e4bdd6a5a8429:0x2d9d6cd6109ecf01!2m2!1d21.7888122!2d38.2941835!3e0" target="_blank" rel="noopener">Χρήστου Παναγόπουλου 5, Ρίο, Πάτρα</a>
+                    <a href="https://www.google.com/maps/dir//Liakopoulos-casa,+%CE%A7%CF%81%CE%AE%CF%83%CF%84%CE%BF%CF%85+%CE%A0%CE%B1%CE%BD%CE%B1%CE%B3%CF%8C%CF%80%CE%BF%CF%85%CE%BB%CE%BF%CF%85,+%CE%A0%CE%B1%CF%84%CF%81%CF%8E%CE%BD+5,+Rio+265+04,+Greece/@38.2944252,21.7857086,794m/data=!3m1!1e3!4m18!1m8!3m7!1s0x135e4bdd6a5a8429:0x2d9d6cd6109ecf01!2sLiakopoulos-casa!8m2!3d38.2941835!4d21.7888122!15sCj3Op8-Bzq7Pg8-Ezr_PhSDOoM6xzr3Osc6zz4zPgM6_z4XOu86_z4UgNSwgzqHOr86_LCDOoM6sz4TPgc6xWj0iO8-Hz4HOrs-Dz4TOv8-FIM-AzrHOvc6xzrPPjM-Azr_Phc67zr_PhSA1IM-Bzq_OvyDPgM6sz4TPgc6xkgESaW50ZXJpb3JfZGVjb3JhdG9y4AEA!16s%2Fg%2F11mp6d9f2h!4m8!1m0!1m5!1m1!1s0x135e4bdd6a5a8429:0x2d9d6cd6109ecf01!2m2!1d21.7888122!2d38.2941835!3e0" target="_blank" rel="noopener" data-i18n="footer_address">Χρήστου Παναγόπουλου 5, Ρίο, Πάτρα</a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <span>&copy; 2025 Liakopoulos Casa. Με επιφύλαξη παντός δικαιώματος.</span>
+            <span data-i18n="footer_rights">&copy; 2025 Liakopoulos Casa. Με επιφύλαξη παντός δικαιώματος.</span>
             <div class="footer-social">
                 <a href="https://www.instagram.com/liakopoulos_casa/" target="_blank" rel="noopener" aria-label="Instagram">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -284,7 +296,7 @@
             <h3 class="category-popup-title" id="popupTitle"></h3>
             <ul class="category-popup-list" id="popupList"></ul>
             <a href="contact.html" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%; justify-content: center;">
-                <span>Επικοινωνήστε μαζί μας</span>
+                <span data-i18n="popup_contact_btn">Επικοινωνήστε μαζί μας</span>
             </a>
         </div>
     </div>
