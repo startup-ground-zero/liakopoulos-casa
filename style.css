@@ -1264,15 +1264,6 @@ img.category-card-placeholder {
     }
 }
 
-.instagram-feed-iframe {
-    display: block;
-    width: 100%;
-    height: 600px;
-    border: none;
-    border-radius: var(--radius-lg);
-    background: white;
-}
-
 .instagram-cta {
     text-align: center;
     margin-top: 3rem;
@@ -1484,10 +1475,6 @@ img.category-card-placeholder {
     .instagram-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-
-    .instagram-feed-iframe {
-        height: 560px;
-    }
     
     .footer-links {
         grid-template-columns: repeat(2, 1fr);
@@ -1530,10 +1517,6 @@ img.category-card-placeholder {
     
     .instagram-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .instagram-feed-iframe {
-        height: 500px;
     }
     
     .footer-links {
