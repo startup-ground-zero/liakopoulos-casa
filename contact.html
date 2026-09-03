@@ -53,6 +53,7 @@
 
             <div class="nav-links" id="navLinks">
                 <a href="index.html" class="nav-link" data-text="Αρχική" data-i18n="nav_home" data-i18n-text="nav_home">Αρχική</a>
+                <a href="categories.html" class="nav-link" data-text="Κατηγορίες" data-i18n="nav_categories" data-i18n-text="nav_categories">Κατηγορίες</a>
                 <a href="inspiration.html" class="nav-link" data-text="Έμπνευση" data-i18n="nav_inspiration" data-i18n-text="nav_inspiration">Έμπνευση</a>
                 <a href="story.html" class="nav-link" data-text="Η Ιστορία μας" data-i18n="nav_story" data-i18n-text="nav_story">Η Ιστορία μας</a>
                 <a href="contact.html" class="nav-link active" data-text="Επικοινωνία" data-i18n="nav_contact" data-i18n-text="nav_contact">Επικοινωνία</a>
@@ -100,6 +101,7 @@
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-inner">
             <a href="index.html" class="mobile-link" data-i18n="nav_home">Αρχική</a>
+            <a href="categories.html" class="mobile-link" data-i18n="nav_categories">Κατηγορίες</a>
             <a href="inspiration.html" class="mobile-link" data-i18n="nav_inspiration">Έμπνευση</a>
             <a href="story.html" class="mobile-link" data-i18n="nav_story">Η Ιστορία μας</a>
             <a href="contact.html" class="mobile-link active" data-i18n="nav_contact">Επικοινωνία</a>
@@ -226,14 +228,19 @@
                                 <input type="text" name="name" required style="width: 100%; padding: 0.9rem 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: var(--font-body); font-size: 0.9rem; background: var(--color-bg); transition: border-color 0.3s, box-shadow 0.3s; outline: none;" onfocus="this.style.borderColor='var(--color-accent)';this.style.boxShadow='0 0 0 3px rgba(184,134,11,0.1)'" onblur="this.style.borderColor='var(--color-border)';this.style.boxShadow='none'">
                             </div>
                             <div>
-                                <label style="display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-light); margin-bottom: 0.4rem;" data-i18n="form_phone">Τηλέφωνο</label>
-                                <input type="tel" name="phone" style="width: 100%; padding: 0.9rem 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: var(--font-body); font-size: 0.9rem; background: var(--color-bg); transition: border-color 0.3s, box-shadow 0.3s; outline: none;" onfocus="this.style.borderColor='var(--color-accent)';this.style.boxShadow='0 0 0 3px rgba(184,134,11,0.1)'" onblur="this.style.borderColor='var(--color-border)';this.style.boxShadow='none'">
+                                <label style="display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-light); margin-bottom: 0.4rem;" data-i18n="form_phone">Τηλέφωνο *</label>
+                                <input type="tel" name="phone" required style="width: 100%; padding: 0.9rem 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: var(--font-body); font-size: 0.9rem; background: var(--color-bg); transition: border-color 0.3s, box-shadow 0.3s; outline: none;" onfocus="this.style.borderColor='var(--color-accent)';this.style.boxShadow='0 0 0 3px rgba(184,134,11,0.1)'" onblur="this.style.borderColor='var(--color-border)';this.style.boxShadow='none'">
                             </div>
                         </div>
                         
                         <div>
-                            <label style="display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-light); margin-bottom: 0.4rem;" data-i18n="form_email">Email *</label>
-                            <input type="email" name="email" required style="width: 100%; padding: 0.9rem 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: var(--font-body); font-size: 0.9rem; background: var(--color-bg); transition: border-color 0.3s, box-shadow 0.3s; outline: none;" onfocus="this.style.borderColor='var(--color-accent)';this.style.boxShadow='0 0 0 3px rgba(184,134,11,0.1)'" onblur="this.style.borderColor='var(--color-border)';this.style.boxShadow='none'">
+                            <label style="display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-light); margin-bottom: 0.4rem;" data-i18n="form_email">Email</label>
+                            <input type="email" name="email" style="width: 100%; padding: 0.9rem 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: var(--font-body); font-size: 0.9rem; background: var(--color-bg); transition: border-color 0.3s, box-shadow 0.3s; outline: none;" onfocus="this.style.borderColor='var(--color-accent)';this.style.boxShadow='0 0 0 3px rgba(184,134,11,0.1)'" onblur="this.style.borderColor='var(--color-border)';this.style.boxShadow='none'">
+                        </div>
+                        
+                        <div>
+                            <label style="display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-light); margin-bottom: 0.4rem;" data-i18n="form_subject">Θέμα</label>
+                            <input type="text" name="subject" id="subjectField" style="width: 100%; padding: 0.9rem 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: var(--font-body); font-size: 0.9rem; background: var(--color-bg); transition: border-color 0.3s, box-shadow 0.3s; outline: none;" onfocus="this.style.borderColor='var(--color-accent)';this.style.boxShadow='0 0 0 3px rgba(184,134,11,0.1)'" onblur="this.style.borderColor='var(--color-border)';this.style.boxShadow='none'">
                         </div>
                         
                         <div>
@@ -263,6 +270,7 @@
                 <div class="footer-col">
                     <h5 data-i18n="footer_nav_title">Πλοήγηση</h5>
                     <a href="index.html" data-i18n="nav_home">Αρχική</a>
+                    <a href="categories.html" data-i18n="nav_categories">Κατηγορίες</a>
                     <a href="inspiration.html" data-i18n="nav_inspiration">Έμπνευση</a>
                     <a href="story.html" data-i18n="nav_story">Η Ιστορία μας</a>
                     <a href="contact.html" data-i18n="nav_contact">Επικοινωνία</a>
@@ -295,7 +303,7 @@
             <button class="category-popup-close" id="popupClose">&times;</button>
             <h3 class="category-popup-title" id="popupTitle"></h3>
             <ul class="category-popup-list" id="popupList"></ul>
-            <a href="contact.html" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%; justify-content: center;">
+            <a href="contact.html" id="popupContactLink" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%; justify-content: center;">
                 <span data-i18n="popup_contact_btn">Επικοινωνήστε μαζί μας</span>
             </a>
         </div>

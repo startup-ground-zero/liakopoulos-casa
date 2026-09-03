@@ -141,6 +141,7 @@
 
             <div class="nav-links" id="navLinks">
                 <a href="index.html" class="nav-link active" data-text="Αρχική" data-i18n="nav_home" data-i18n-text="nav_home">Αρχική</a>
+                <a href="categories.html" class="nav-link" data-text="Κατηγορίες" data-i18n="nav_categories" data-i18n-text="nav_categories">Κατηγορίες</a>
                 <a href="inspiration.html" class="nav-link" data-text="Έμπνευση" data-i18n="nav_inspiration" data-i18n-text="nav_inspiration">Έμπνευση</a>
                 <a href="story.html" class="nav-link" data-text="Η Ιστορία μας" data-i18n="nav_story" data-i18n-text="nav_story">Η Ιστορία μας</a>
                 <a href="contact.html" class="nav-link" data-text="Επικοινωνία" data-i18n="nav_contact" data-i18n-text="nav_contact">Επικοινωνία</a>
@@ -188,6 +189,7 @@
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-inner">
             <a href="index.html" class="mobile-link active" data-i18n="nav_home">Αρχική</a>
+            <a href="categories.html" class="mobile-link" data-i18n="nav_categories">Κατηγορίες</a>
             <a href="inspiration.html" class="mobile-link" data-i18n="nav_inspiration">Έμπνευση</a>
             <a href="story.html" class="mobile-link" data-i18n="nav_story">Η Ιστορία μας</a>
             <a href="contact.html" class="mobile-link" data-i18n="nav_contact">Επικοινωνία</a>
@@ -298,7 +300,7 @@
             
             <div class="categories-scroll">
                 <div class="categories-track">
-                    <div class="category-card" data-category="sidirika">
+                    <div class="category-card" data-category="sidirika" data-tooltip="Κάντε κλικ για να δείτε τα προϊόντα" data-i18n-attr="data-tooltip:cat_click_hint">
                         <div class="category-card-img">
                             <div class="category-card-overlay"></div>
                             <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=900&fit=crop" alt="Σιδηρικά" class="category-card-placeholder" loading="lazy">
@@ -310,7 +312,7 @@
                         </div>
                     </div>
 
-                    <div class="category-card" data-category="xromata">
+                    <div class="category-card" data-category="xromata" data-tooltip="Κάντε κλικ για να δείτε τα προϊόντα" data-i18n-attr="data-tooltip:cat_click_hint">
                         <div class="category-card-img">
                             <div class="category-card-overlay"></div>
                             <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&h=900&fit=crop" alt="Χρώματα" class="category-card-placeholder" loading="lazy">
@@ -322,7 +324,7 @@
                         </div>
                     </div>
 
-                    <div class="category-card" data-category="diakosmitika">
+                    <div class="category-card" data-category="diakosmitika" data-tooltip="Κάντε κλικ για να δείτε τα προϊόντα" data-i18n-attr="data-tooltip:cat_click_hint">
                         <div class="category-card-img">
                             <div class="category-card-overlay"></div>
                             <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=900&fit=crop" alt="Διακοσμητικά" class="category-card-placeholder" loading="lazy">
@@ -334,7 +336,7 @@
                         </div>
                     </div>
 
-                    <div class="category-card" data-category="mpanio">
+                    <div class="category-card" data-category="mpanio" data-tooltip="Κάντε κλικ για να δείτε τα προϊόντα" data-i18n-attr="data-tooltip:cat_click_hint">
                         <div class="category-card-img">
                             <div class="category-card-overlay"></div>
                             <img src="https://images.unsplash.com/photo-1564540583246-934409427776?w=600&h=900&fit=crop" alt="Μπάνιο" class="category-card-placeholder" loading="lazy">
@@ -356,7 +358,7 @@
             <button class="category-popup-close" id="popupClose">&times;</button>
             <h3 class="category-popup-title" id="popupTitle"></h3>
             <ul class="category-popup-list" id="popupList"></ul>
-            <a href="contact.html" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%; justify-content: center;">
+            <a href="contact.html" id="popupContactLink" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%; justify-content: center;">
                 <span data-i18n="popup_contact_btn">Επικοινωνήστε μαζί μας</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
             </a>
@@ -524,17 +526,23 @@
                 <p class="section-desc reveal-up" data-i18n="insta_desc">Καθημερινή έμπνευση στο Instagram</p>
             </div>
             
-            <div class="instagram-grid">
-                <div class="instagram-item" style="background: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop') center/cover"></div>
-                <div class="instagram-item" style="background: url('https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=400&h=400&fit=crop') center/cover"></div>
-                <div class="instagram-item" style="background: url('https://images.unsplash.com/photo-1615971677499-5467cbab01c0?w=400&h=400&fit=crop') center/cover"></div>
-                <div class="instagram-item" style="background: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=400&fit=crop') center/cover"></div>
-                <div class="instagram-item" style="background: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=400&h=400&fit=crop') center/cover"></div>
-                <div class="instagram-item" style="background: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=400&h=400&fit=crop') center/cover"></div>
+            <!--
+                Native Instagram profile embed (public, no API key, no third-party widget).
+                Instagram serves a public read-only iframe at /<username>/embed/ for public accounts.
+            -->
+            <div class="instagram-feed-embed">
+                <iframe
+                    src="https://www.instagram.com/liakopoulos_casa/embed/"
+                    class="instagram-feed-iframe"
+                    title="Instagram feed for @liakopoulos_casa"
+                    loading="lazy"
+                    frameborder="0"
+                    scrolling="no"
+                    allowtransparency="true"></iframe>
             </div>
 
             <div class="instagram-cta">
-                <a href="https://www.instagram.com/liakopoulos_casa/" target="_blank" rel="noopener" class="btn btn-primary">
+                <a href="https://www.instagram.com/liakopoulos_casa/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <span data-i18n="insta_btn">Ακολουθήστε μας</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M7 17L17 7M17 7H7M17 7V17"/>
@@ -638,6 +646,7 @@
                 <div class="footer-col">
                     <h5 data-i18n="footer_nav_title">Πλοήγηση</h5>
                     <a href="index.html" data-i18n="nav_home">Αρχική</a>
+                    <a href="categories.html" data-i18n="nav_categories">Κατηγορίες</a>
                     <a href="inspiration.html" data-i18n="nav_inspiration">Έμπνευση</a>
                     <a href="story.html" data-i18n="nav_story">Η Ιστορία μας</a>
                     <a href="contact.html" data-i18n="nav_contact">Επικοινωνία</a>

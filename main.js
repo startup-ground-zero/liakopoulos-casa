@@ -303,6 +303,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('submitBtn');
     const submitText = document.getElementById('submitText');
 
+    // Pre-fill subject from ?subject= query param (e.g. coming from a category popup)
+    const subjectField = document.getElementById('subjectField');
+    if (subjectField) {
+        const subjectParam = new URLSearchParams(window.location.search).get('subject');
+        if (subjectParam) {
+            subjectField.value = subjectParam;
+        }
+    }
+
     if (contactForm && submitBtn) {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -398,6 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
             marquee_garden_sheds: "Αποθήκες Κήπου",
             cat_section_label: "01 / Κατηγορίες",
             cat_section_title: "Ό,τι χρειάζεται<br>το σπίτι σας",
+            cat_click_hint: "Κάντε κλικ για να δείτε τα προϊόντα",
             cat_1_title: "Σιδηρικά",
             cat_1_desc: "Εργαλεία, υλικά, βίδες, κόλλες",
             cat_2_title: "Χρώματα",
@@ -479,8 +489,9 @@ document.addEventListener('DOMContentLoaded', () => {
             form_title: "Στείλτε μας μήνυμα",
             form_subtitle: "Θα σας απαντήσουμε εντός 24 ωρών",
             form_name: "Όνομα *",
-            form_phone: "Τηλέφωνο",
-            form_email: "Email *",
+            form_phone: "Τηλέφωνο *",
+            form_email: "Email",
+            form_subject: "Θέμα",
             form_message: "Μήνυμα *",
             form_submit: "Αποστολή",
             // Categories Page
@@ -619,6 +630,7 @@ document.addEventListener('DOMContentLoaded', () => {
             marquee_garden_sheds: "Garden Sheds",
             cat_section_label: "01 / Categories",
             cat_section_title: "Everything your<br>home needs",
+            cat_click_hint: "Click to see the products",
             cat_1_title: "Hardware",
             cat_1_desc: "Tools, materials, screws, adhesives",
             cat_2_title: "Paints",
@@ -700,8 +712,9 @@ document.addEventListener('DOMContentLoaded', () => {
             form_title: "Send us a message",
             form_subtitle: "We will get back to you within 24 hours",
             form_name: "Name *",
-            form_phone: "Phone",
-            form_email: "Email *",
+            form_phone: "Phone *",
+            form_email: "Email",
+            form_subject: "Subject",
             form_message: "Message *",
             form_submit: "Send Message",
             // Categories Page
@@ -840,6 +853,7 @@ document.addEventListener('DOMContentLoaded', () => {
             marquee_garden_sheds: "Casette da Giardino",
             cat_section_label: "01 / Categorie",
             cat_section_title: "Tutto ciò di cui<br>la tua casa ha bisogno",
+            cat_click_hint: "Clicca per vedere i prodotti",
             cat_1_title: "Ferramenta",
             cat_1_desc: "Utensili, materiali, viti, adesivi",
             cat_2_title: "Colori e Pitture",
@@ -921,8 +935,9 @@ document.addEventListener('DOMContentLoaded', () => {
             form_title: "Inviaci un messaggio",
             form_subtitle: "Ti risponderemo entro 24 ore",
             form_name: "Nome *",
-            form_phone: "Telefono",
-            form_email: "Email *",
+            form_phone: "Telefono *",
+            form_email: "Email",
+            form_subject: "Oggetto",
             form_message: "Messaggio *",
             form_submit: "Invia Messaggio",
             // Categories Page
@@ -1060,6 +1075,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupTitle = document.getElementById('popupTitle');
     const popupList = document.getElementById('popupList');
     const popupClose = document.getElementById('popupClose');
+    const popupContactLink = document.getElementById('popupContactLink');
+
+    function setPopupContactLink(title) {
+        if (popupContactLink) {
+            popupContactLink.href = 'contact.html?subject=' + encodeURIComponent(title) + '#contactForm';
+        }
+    }
 
     // Build Search Index
     let searchIndex = [];
@@ -1155,6 +1177,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (data) {
                 popupTitle.textContent = data.title;
                 popupList.innerHTML = data.items.map(item => `<li>${item}</li>`).join('');
+                setPopupContactLink(data.title);
             }
         }
 
@@ -1191,6 +1214,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentPopupCategory = key;
             popupTitle.textContent = data.title;
             popupList.innerHTML = data.items.map(item => `<li>${item}</li>`).join('');
+            setPopupContactLink(data.title);
             popup.classList.add('active');
             document.body.style.overflow = 'hidden';
         });
@@ -1267,6 +1291,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         currentPopupCategory = item.category;
                         popupTitle.textContent = data.title;
                         popupList.innerHTML = data.items.map(i => `<li>${i}</li>`).join('');
+                        setPopupContactLink(data.title);
                         popup.classList.add('active');
                         document.body.style.overflow = 'hidden';
                     }
